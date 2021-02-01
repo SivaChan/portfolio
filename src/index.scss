@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.w-30 {
+  width: 30px;
+}
+
+.px-5 {
+  padding: 0 5px;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-res-1 {
+  @media(max-width: 900px) {
+    padding: 1rem 0;
+  }
+}
+
+@mixin mixin-flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-start {
+  @include mixin-flex-start;
+}
+
+.flex-start-res {
+  @media(min-width: 900px) {
+    @include mixin-flex-start;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.py-5px {
+  padding: 5px 0;
+}
+
+.divider {
+  width: 80%;
+  margin: auto;
+  border-top: 1px solid #777777;
+}
+
+.p-1 {
+  padding: 1rem;
+}
