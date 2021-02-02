@@ -45,8 +45,10 @@ body {
 }
 
 .auto-fit {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  @media(min-width: 900px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .py-5px {
@@ -61,4 +63,16 @@ body {
 
 .p-1 {
   padding: 1rem;
+}
+
+.pb-5 {
+  padding-bottom: 5rem;
+}
+
+.mx-4 {
+  @media(min-width: 900px) {
+    margin: 0 4rem;
+  }
+
+  margin: 0 1rem;
 }

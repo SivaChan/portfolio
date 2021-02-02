@@ -1,10 +1,12 @@
+$secondary-color: rgb(255, 168, 0);
+
 .dark {
-  background-color: #1a1a1a;
+  background-color: #222222;
   color: #fff;
 }
 
 .light {
-  background-color: #fff;
+  background-color: #f5f9fb;
   color: #1a1a1a;
 }
 
@@ -12,27 +14,50 @@
   min-height: 100vh;
 }
 
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
+.highlight {
+  color: $secondary-color;
+  text-shadow: 1px 1px #222222;
+}
+
+.main {
+  margin-top: 72px;
+  @media(min-width: 600px) {
+    padding: 2rem;
+  }
 }
 
 header {
-  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  padding: 1rem 0;
+
+  .header-title {
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 2rem;
+  }
 }
 
 .profile {
   @media (min-width: 900px) {
-    padding: 3rem 4rem;
+    padding: 1rem 4rem 4rem 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  padding: 1rem;
+  padding: 3rem 0;
 
   .profile-image-comp {
     display: flex;
@@ -51,16 +76,12 @@ header {
   }
 
   .profile-content {
+    padding-left: 1rem;
+
     @media (min-width: 600px) {
-      padding: 2rem;
       display: flex;
       justify-content: center;
-    }
-
-    .profile-title {
-      font-size: 3rem;
-      font-weight: bold;
-      letter-spacing: 2px;
+      align-items: center;
     }
 
     .profile-desc {
@@ -75,13 +96,23 @@ header {
   }
 }
 
+.pin {
+  padding-left: 1rem;
+  padding-top: 2rem;
+
+  @media(max-width: 900px) {
+    display: none;
+  }
+}
+
 .sm-comp {
   @media(min-width: 900px) {
     position: fixed;
-    top: 50vh;
-    right: 0;
-    border-radius: 5px;
-    // box-shadow: 0 1px 7px 2px #f2f2f2;
+    top: 40vh;
+    right: 1rem;
+    border-radius: 30px;
+    // border: 1.5px solid orange;
+    box-shadow: 0 1px 7px 2px #777;
     z-index: 2;
   }
 
@@ -128,15 +159,38 @@ header {
 }
 
 .skills {
-  padding: 2rem 4rem;
+  margin: 2rem 4rem;
 
   @media(max-width: 600px) {
-    padding: 1rem;
+    margin: 1rem;
   }
+}
 
-  .skills-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+.skills-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-transform: uppercase;
+
+  @media(min-width: 900px) {
+    margin: 2rem 0;
   }
+}
+
+.technology-icon {
+  width: 100px;
+  padding: 1.5rem;
+
+  @media(max-width: 600px) {
+    width: 60px;
+    padding: .8rem;
+  }
+}
+
+.tech-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $secondary-color;
+  text-shadow: 0.3px 0.3px #222222;
 }
