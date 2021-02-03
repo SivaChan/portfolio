@@ -12,6 +12,10 @@ body {
   padding: 0 5px;
 }
 
+.py-3px {
+  padding: 3px 0;
+}
+
 .py-1 {
   padding: 1rem 0;
 }
@@ -22,20 +26,10 @@ body {
   }
 }
 
-@mixin mixin-flex-start {
+.flex-start {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.flex-start {
-  @include mixin-flex-start;
-}
-
-.flex-start-res {
-  @media(min-width: 900px) {
-    @include mixin-flex-start;
-  }
+  align-items: center;
 }
 
 .flex-center {
@@ -75,4 +69,8 @@ body {
   }
 
   margin: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
 }
